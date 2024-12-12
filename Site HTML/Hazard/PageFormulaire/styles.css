@@ -1,0 +1,63 @@
+/*STYLES HEADER ET NAVBAR*/
+body {
+    font-family: /*"Helvetica Neue", Helvetica, Arial, sans-serif*/ Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  
+  .navbar {
+      background-color: white;
+      color: white;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      border-bottom: 1px solid rgb(218, 218, 218);
+    }
+  .navbar-lien {
+        text-decoration: none;
+        font-weight: bold;
+        color: #003978;
+    }
+  
+  .navbar-une {
+    text-decoration: none;
+    font-weight: bold;
+    width: 78px;
+    height: 35px;
+    color: white;
+    background-color: #003978;
+    border-radius: 17px;
+    padding-top: 4px;
+    padding-left: 5px;
+  }
+  
+  header {
+      background-color: #003978;
+      color: white;
+      text-align: center;
+      height: 100px;
+  }
+  #bouton-identifier{
+    text-align: right;
+    background-color: yellow;
+    font-size: medium;
+  
+  }
+  #inscrire{
+    text-align: end;
+    color:white;
+    font-size: medium;
+  
+  }
+  
+  h1{
+    color:#003978;
+  }
+  
+form {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: whitesmoke;
+}
