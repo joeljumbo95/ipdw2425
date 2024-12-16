@@ -1,0 +1,160 @@
+
+/*STYLES HEADER ET NAVBAR*/
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.navbar {
+    background-color: white;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-bottom: 1px solid rgb(218, 218, 218);
+  }
+.navbar-lien {
+      text-decoration: none;
+      font-weight: bold;
+      color: #003978;
+  }
+
+.navbar-une {
+  text-decoration: none;
+  font-weight: bold;
+  width: 78px;
+  height: 35px;
+  color: white;
+  background-color: #003978;
+  border-radius: 17px;
+  padding-top: 4px;
+  padding-left: 5px;
+}
+
+header {
+    background-color: #003978;
+    color: white;
+    text-align: center;
+    height: 100px;
+}
+#bouton-identifier{
+  text-align: right;
+  background-color: yellow;
+  font-size: medium;
+
+}
+#inscrire{
+  text-align: end;
+  color:white;
+  font-size: medium;
+
+}
+
+#a {
+  border-bottom: 1px solid #003978;
+
+}
+
+/*STYLES TABLE DROITE*/
+table{
+  width: 100%;
+}
+
+td{
+  height: 30px ;
+  vertical-align: top; 
+  background-color: white;
+  border: 2px solid black;
+}
+#meteo{
+  width: 50%;
+  border-right: 1px solid gray;
+  text-align: center;
+  font-weight: bold;
+  color: #003978;
+}
+#bourse{
+  text-align: center;
+  color: #003978;
+}
+#resbourse{
+  text-align: center;
+}
+#resmeteo{
+  border-bottom: 2px solid #003978;
+  text-align: center;
+}
+#celmeteo{
+  border-right: 1px solid gray;
+}
+
+#boutSports{
+  text-align: left;
+  vertical-align: bottom;
+}
+
+#fil{
+  font-weight: bold;
+  font-size: larger;
+  
+}
+
+#arttable{
+  text-align: left;
+  text-decoration: none;
+  border-bottom: 1px solid rgb(218, 218, 218);
+  border-left: 1px solid rgb(218, 218, 218);
+
+}
+
+#arttable a{
+  text-decoration: none;
+  color: black;
+}
+
+#arttable a:hover {
+  text-decoration: underline;
+  color:#003978;
+}
+
+#celheure{
+  text-align: center;
+  border-bottom: 1px solid rgb(218, 218, 218);
+
+
+}
+.boutonActualites{
+  background-color: #003978;
+  color: white;
+  border-radius: 17px;
+  padding-top: 4px;
+  padding-left: 5px;
+  
+}
+.boutonSports{
+  background-color: whitesmoke;
+  color: black;
+  border-radius: 17px;
+  padding-top: 4px;
+  padding-left: 5px;
+  
+}
+
+li{
+  list-style: circle;
+  list-style-position: inside;
+  
+}
+
+
+
+/*STYLES FOOTER*/
+footer{
+  background-color: white;
+  font-size: smaller;
+
+}
+#footerTable{
+  background-color: white;
+  border-bottom: #003978 2px solid;
+}
+
