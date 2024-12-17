@@ -1,6 +1,6 @@
 <?php
 
-function html_head()
+function html_head($menu_a)
 {
     $debug = false;
 	ob_start();
@@ -35,6 +35,21 @@ function html_head()
             <a class="navbar-lien" href="#">Economie</a>
             <a class="navbar-lien" href="#">Vidéos</a>
             <a class="navbar-lien" href="#">Sports</a>
+        </nav>
+    </div>  <div class="container">
+        <nav class="navbar">
+            <?php
+            foreach ($menu_a as $menu)
+            {
+                $text =$menu[0];
+                $link =$menu[1];
+
+                echo <<<HTML
+                <a class="navbar-lien" href ="?page=$link" >$text</a> |
+HTML;
+
+            }
+            ?>
         </nav>
     </div>
     <?php
