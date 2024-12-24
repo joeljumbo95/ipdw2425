@@ -17,7 +17,7 @@ function html_body()
                         <section>
                             <article>
                                 <h2><a href= "../Article/index.html"> Eden Hazard : Le Fiasco au Real Madrid et la Nouvelle Carrière à Burger King</a></h2>
-                                <img src="../Images/hazard_burger_king.jpg" width="600" height="400">
+                                <img src="../../Site MVC/Public/media/Images/hazard_burger_king.jpg" width="600" height="400">
                                 <p>Eden Hazard, l'ancienne superstar de Chelsea et membre de l'équipe nationale belge, a réussi à rater complètement sa carrière au Real Madrid et à décrocher un accord lucratif avec Burger King</p>
                             </article>
                         </section>

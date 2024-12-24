@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f92a9ca-7142-4e73-8eec-a1d03a1e7836" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Site MVC/app/controller/common.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Site MVC/app/controller/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/Site MVC/app/controller/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Site MVC/app/controller/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/Site MVC/app/controller/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Site MVC/app/model/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/Site MVC/app/model/common.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Site MVC/app/view/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/Site MVC/app/view/common.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Site MVC/asset/database/login.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Site MVC/asset/database/login.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site MVC/app/view/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/Site MVC/app/view/home.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +19,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP8.0.26" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
