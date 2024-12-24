@@ -1,6 +1,6 @@
 <?php
 
-function html_head($menu_a)
+function html_head($menu_a, $user_id="",$user_role="")
 {
     $debug = false;
 	ob_start();
@@ -20,23 +20,15 @@ function html_head($menu_a)
         <div class="container">
             <img src="../../Site MVC/public/media/Images/logofollyfoot.png" height="100" alt="Folyfoot logo"/>
             <button id="bouton-identifier">Identifier</button>
+            <?php
+             html_logout_button();
+            ?>
+
             <a id="inscrire" href="#"><i class="fas fa-lock"> S'inscrire</i></a>
         </div>
 
     </header>
-    <div class="container">
-        <nav class="navbar">
-            <a class="navbar-une" href="../PageAccueil/index.html">A La Une</a>
-            <a class="navbar-lien" href="#">Opinions</a>
-            <a class="navbar-lien" href="#">Podcast</a>
-            <a class="navbar-lien" href="#">Politique</a>
-            <a class="navbar-lien" href="#">Societé</a>
-            <a class="navbar-lien" href="#">Monde</a>
-            <a class="navbar-lien" href="#">Economie</a>
-            <a class="navbar-lien" href="#">Vidéos</a>
-            <a class="navbar-lien" href="#">Sports</a>
-        </nav>
-    </div>  <div class="container">
+      <div class="container">
         <nav class="navbar">
             <?php
             foreach ($menu_a as $menu)
@@ -50,6 +42,7 @@ HTML;
 
             }
             ?>
+            <p class="navbar-lien">Bienvenue  <?=$user_id?> (<?=$user_role?>)</p>
         </nav>
     </div>
     <?php

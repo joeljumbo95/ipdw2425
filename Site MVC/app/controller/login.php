@@ -30,10 +30,10 @@ function main_login()
 	if(isset($_SESSION['id']))
 	{
 		// l'utilisateur est déjà identifié
+        //On lui propose le logout
 		// plus besoin du composant login
 		// => redirection vers home page
-		print('mouchard');
-		header("Location: .");
+		$msg .= html_logout_button();
 	}
 	else
 	{
