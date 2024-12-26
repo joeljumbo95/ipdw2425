@@ -95,7 +95,7 @@ function html_body()
                 <div class="row">
                     <div class="col-sm-4" >
                         <h3>Le Penalty Spatial : La NASA Retrouve le Ballon d’Harry Kane en Orbite!</h3>
-                        <img src="../Images/kanePenalty.png" width="350" height="200">
+                        <img src="../site MVC/app/kanePenalty.png" width="350" height="200">
                         <p>
                             Dans une découverte inattendue, la NASA a localisé le ballon de football d'Harry Kane en orbite terrestre basse. Surnommé le "Penalty Spatial", cet objet insolite suscite des questions sur la trajectoire étonnante du ballon et soulève des discussions passionnantes sur la relation entre le sport et l'exploration spatiale.
                         </p>

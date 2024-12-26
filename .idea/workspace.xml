@@ -7,6 +7,10 @@
     <list default="true" id="0f92a9ca-7142-4e73-8eec-a1d03a1e7836" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Site MVC/app/view/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/Site MVC/app/view/home.php" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/Site MVC/asset/database/menu.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Site MVC/asset/database/menu.csv" afterDir="false" />
+>>>>>>> a510895014bac3bbd5673412cad150d6103a31f8
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +63,7 @@
       <workItem from="1734451832966" duration="4900000" />
       <workItem from="1734470422575" duration="604000" />
       <workItem from="1734614912662" duration="7424000" />
+      <workItem from="1735042543147" duration="1703000" />
     </task>
     <servers />
   </component>
