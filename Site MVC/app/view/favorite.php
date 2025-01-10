@@ -7,7 +7,7 @@ function html_favorite_main($favorites_array)
     <h1>Articles favoris</h1>
 
     <?php
-    // Changed the empty check to be more robust
+    // Efface les vides
     if (empty($favorites_array) || count($favorites_array) === 0 || (count($favorites_array) === 1 && reset($favorites_array) == "0")) {
         ?>
         <p>Vous n'avez pas encore d'articles favoris.</p>
@@ -16,8 +16,8 @@ function html_favorite_main($favorites_array)
         ?>
         <section class="bottom_articles">
             <?php
-            // Clean the array before using it
-            $favorites_array = array_values(array_filter($favorites_array)); // This reindexes and removes empty values
+            // Nettoie le array
+            $favorites_array = array_values(array_filter($favorites_array));
 
             foreach ($favorites_array as $art_id) {
                 if (!empty($art_id)) {

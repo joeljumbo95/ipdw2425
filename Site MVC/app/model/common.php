@@ -1,21 +1,34 @@
 <?php
 
-function get_menu_csv()
+function get_menu_json()
 {
-    $fn = '../asset/database/menu.csv';
-    $menu_s = file_get_contents($fn); // transforme tout le fichier csv en un string
-///mais nous voulons 1 tableau et un sous tableau
-     $menu_a = explode("\n",$menu_s);
-//Creation d'un tableau
-    $menu_aa = [];
-    foreach($menu_a as $line)
-    {
-        //append dans menu_aa
-        $menu_aa[]= explode("|",$line);
-
+    $fn = '../asset/database/menu.json';
+    if (!file_exists($fn)) {
+        return [];
     }
-    return $menu_aa;
+
+    $menu_s = file_get_contents($fn);
+    $menu_data = json_decode($menu_s, true);
+
+    if (json_last_error() !== JSON_ERROR_NONE) {
+        echo "Erreur lors du décodage JSON : " . json_last_error_msg();
+        return [];
+    }
+
+    // Transformation du format JSON en format attendu par la vue
+    $menu_formatted = [];
+    foreach ($menu_data as $fr => $en) {
+        // Vérifier si c'est un tableau (pour static pages)
+        if (is_array($en)) {
+            $menu_formatted[] = [$fr => $en[0] . "&name=" . $en[1]];
+        } else {
+            $menu_formatted[] = [$fr => $en];
+        }
+    }
+
+    return $menu_formatted;
 }
+
 
 /*
  * Fonction returne un objet pdo et le crée si il n'existe pas

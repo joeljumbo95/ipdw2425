@@ -1,16 +1,52 @@
-<h2>A propos de nous</h2>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt orci sed dolor rhoncus mattis. Curabitur bibendum lectus eu finibus mollis. Nullam eu dapibus nunc. Nunc venenatis risus eget enim tempor condimentum. Sed nisi velit, tincidunt sed nulla nec, blandit rhoncus ex. Morbi cursus libero sed nisl commodo vulputate. Aliquam vulputate consectetur varius. Suspendisse interdum mollis nisl, ut scelerisque augue. Nulla dictum tortor at vestibulum pharetra.
-</p>
-<p>
-Suspendisse dapibus ante vel cursus mollis. Curabitur mattis massa diam. Duis elit magna, tempus ac tellus a, ullamcorper venenatis est. Aliquam elementum eleifend sem. Pellentesque faucibus erat ac convallis dictum. Ut suscipit elit nulla, at volutpat elit consequat ac. Etiam consequat venenatis hendrerit.
-</p>
-<p>
-Morbi bibendum risus eget massa fermentum condimentum. Proin feugiat diam viverra elementum vulputate. Curabitur pretium urna augue, et lacinia nunc aliquam vitae. Maecenas porta consequat massa, vitae tincidunt dolor congue ut. Nulla hendrerit mauris tortor, nec faucibus diam interdum vitae. Phasellus est enim, lacinia quis efficitur eget, luctus in mi. Nullam dui massa, faucibus at sapien in, eleifend bibendum risus. Vivamus suscipit ac odio pretium auctor.
-</p>
-<p>
-Proin eget ipsum at lectus convallis elementum eleifend sit amet orci. Sed volutpat consequat arcu sed ornare. Vivamus finibus nisl eget felis lacinia, vehicula cursus risus lacinia. Morbi nec mollis diam, ut lobortis enim. Suspendisse rutrum fringilla purus, sit amet iaculis ligula fringilla sed. Nunc aliquet, felis a euismod hendrerit, velit risus posuere ligula, ut suscipit sem enim finibus nulla. Donec rutrum sit amet ipsum at vestibulum. Donec eu dui in risus ornare interdum.
-</p>
-<p>
-Duis tempus lectus vitae tellus semper laoreet in ac ante. Vivamus lacus lorem, semper ac euismod in, tristique vitae nibh. Nunc ac orci finibus, blandit dolor nec, tincidunt ipsum. Nam non metus libero. Vestibulum vitae vulputate velit. Donec sit amet sodales lacus. Nullam maximus bibendum ex, vel dignissim libero viverra a. Suspendisse tempor eleifend lorem, vel lobortis tortor tristique nec. Etiam et pharetra ante. Donec quis ligula vitae felis aliquam malesuada. Sed ante tellus, finibus eu posuere ac, malesuada sit amet neque. Nam a dui neque. Sed at mi molestie, tempus lectus eget, semper quam.
-</p>
+<h2>Groupe Y</h2>
+<h3>Style et Thème</h3>
+<p><b>option de présentation : thème : light or dark or grey</b></p>
+<p><b>option de présentation : font : 3 font colors</b></p>
+<p>Boutons afin de mettre différents types de background colors entre blanc, gris et foncé. La logique pour que les boutons fonctionnent est dans la fonction
+    <code>ctrl_head()</code> et est récupérée dans le style du <code>html_head</code>.</p>
+<h3>Login</h3>
+<p><b>sauvegarde de l'identification (login) : file</b></p>
+<p>Le fichier de l'identification se trouve dans <code>asset/database/login.csv</code> et reprend les différentes personnes autorisées.</p>
+<p>Voici le nom des fonctions qui permettent le fonctionnement du login :</p>
+<ul>
+    <li><code>function login_validate($input, $password)</code></li>
+    <li><code>function html_open_form()</code></li>
+    <li><code>function html_close_form()</code></li>
+    <li><code>function html_unidentified_user()</code></li>
+    <li><code>function html_link_home()</code></li>
+    <li><code>function main_login()</code></li>
+</ul>
+<h3>Menu Dynamique</h3>
+<p><b>source du menu : hardcodé (assoc array)</b></p>
+<p>Mise en place d'un menu dynamique à partir d'un tableau associatif (JSON) situé dans <code>/asset/database/menu.json</code>.</p>
+<p>Voici la fonction utilisée pour générer ce menu :</p>
+<ul>
+    <li><code>function get_menu_json()</code></li>
+    <li>Creation des lien du menu dans le common.php/view dans <code>navbar</code></li>
+</ul>
+<h3>Page Statique</h3>
+<p><b>source des pages statiques : database</b></p>
+<p>Création des pages statiques telles que <code>about</code> et <code>cvg</code>.</p>
+<p>Le contenu des pages statiques se trouve dans <b>/asset/static_content</b></p>
+<p>Voici les fonctions utilisées pour gérer les pages statiques :</p>
+
+<ul>
+    <li><code>function get_static_content($name)</code></li>
+    <li><code>function main_static(): string</code></li>
+</ul>
+<h3>Sponsor</h3>
+<p>Affichage de données JSON provenant d'une source tierce : <a href="http://playground.burotix.be/adv/banner_for_isfce.json" target="_blank">http://playground.burotix.be/adv/banner_for_isfce.json</a></p>
+<p>Voici les fonctions utilisées pour gérer les sponsors :</p>
+<ul>
+    <li><code>function main_sponsor(): string</code></li>
+    <li><code>function get_sponsor_data()</code></li>
+    <li><code>function html_sponsor_body()</code></li>
+</ul>
+<h3>Favoris</h3>
+<p><b>Sauvegarde du panier d’articles favoris : cookie</b></p>
+<p>Voici les fonctions utilisées:</p>
+<ul>
+    <li><code>function main_favorite()</code></li>
+    <li><code>function html_favorite_main()</code></li>
+</ul>
+

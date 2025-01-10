@@ -1,6 +1,6 @@
 <?php
 
-function html_head($menu_a, $user_id="",$user_role="")
+function html_head($menu_a, $user_id="",$user_role="",$background_color='#ffffff', $font_family='Arial')
 {
     $debug = false;
 	ob_start();
@@ -13,37 +13,62 @@ function html_head($menu_a, $user_id="",$user_role="")
         <link rel="stylesheet" href="../../Site MVC/public/css/internal/styles.css"/>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <style>
+            body,
+            .container,
+            .navbar,
+            td,
+            #footerTable,
+            footer{
+                background-color: <?php echo $background_color;?>;
+                font-family:<?php echo $font_family; ?>;
+            }
+
+        </style>
     </head>
 
     <body>
     <header>
-        <div class="container">
-            <img src="../../Site MVC/public/media/Images/logofollyfoot.png" height="100" alt="Folyfoot logo"/>
-            <button id="bouton-identifier">Identifier</button>
-            <?php
-             html_logout_button();
-            ?>
+        <div class="header-container">
+            <!-- Boutons à gauche -->
+            <div class ="left-section">
+                <?php echo form_background();?>
+            </div>
+            <!-- Logo ballon au centre -->
 
-            <a id="inscrire" href="#"><i class="fas fa-lock"> S'inscrire</i></a>
+            <img src="../../Site MVC/public/media/Images/logofollyfoot.png" height="100" alt="Follyfoot logo"/>
+
+            <div class ="user-section">
+                <span>Bienvenue <?= $user_id ?> <?= $user_role ?></span>
+                <?php html_logout_button(); ?>
+            </div>
+
         </div>
-
     </header>
     <main>
       <div class="container">
         <nav class="navbar">
             <?php
-            foreach ($menu_a as $menu)
-            {
-                $text =$menu[0];
-                $link =$menu[1];
 
-                echo <<<HTML
-                <a class="navbar-lien" href ="?page=$link" >$text</a> |
+            foreach ($menu_a as $menu) {
+                // Vérifiez si l'entrée contient une clé et une valeur
+                foreach ($menu as $text => $link) {
+                    if (is_array($link)) {
+                        // Si le lien est un tableau (exemple : "A propos"), vous pouvez gérer les sous-liens ici
+                        foreach ($link as $subText => $subLink) {
+                            echo <<<HTML
+                <a class="navbar-lien" href="?page=$subLink">$subText</a> |
 HTML;
-
+                        }
+                    } else {
+                        // Génère les liens standards
+                        echo <<<HTML
+            <a class="navbar-lien" href="?page=$link">$text</a> |
+HTML;
+                    }
+                }
             }
             ?>
-            <p class="navbar-lien">Bienvenue  <?=$user_id?> (<?=$user_role?>)</p>
         </nav>
     </div>
     <?php
@@ -220,3 +245,15 @@ function html_foot()
 	return ob_get_clean();
 }
 
+function form_background() {
+    $out = <<<HTML
+    <div class="bg-buttons">
+        <form method="POST" action="" style="display: flex; gap: 5px;">
+            <button type="submit" name="color" value="#ffffff">White</button>
+            <button type="submit" name="color" value="#d3d3d3">Grey</button>
+            <button type="submit" name="color" value="#a9a9a9">Black</button>
+        </form>
+    </div>
+HTML;
+    return $out;
+}

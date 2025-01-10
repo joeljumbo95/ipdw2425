@@ -7,6 +7,7 @@ function html_article_main($article_a)
     $art_id = $article_a['id'];
     $contents = $article_a['content'];
     $date = $article_a['date_published'];
+    $readtime = $article_a['readtime'];
     $image_path = MEDIA_ARTICLE_PATH.$article_a['image_name'];
 
     ob_start();
@@ -16,7 +17,8 @@ function html_article_main($article_a)
             <h1><?=$title?></h1>
             <h2><?=$hook?></h2>
             <div class="media_article"><img src=<?php echo $image_path;?> alt=<?php echo $title;?>></div>
-            <div><?=$date?></div>
+            <div class="date"><?=$date?></div>
+            <div class="readtime"><?=$readtime?></div>
             <div><?=$contents?></div>
             <div class="bouton_jaime">
                 <form method="POST" action="index.php?page=favorite" onsubmit="console.log('Form submitted')">

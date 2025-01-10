@@ -7,22 +7,34 @@
  */
 function html_home_main($article_a, $bottom_article_a)
 {
-    $title = $article_a['title'];
-    $hook = $article_a['hook'];
-    $art_id = $article_a['id'];
-
-	ob_start();
-	?>
-	<section class="breaking">
-        <article>
-            <a href="?page=article&art_id=<?=$art_id?>"><h1><?=$title?></h1></a>
-            <h2><?=$hook?></h2>
+    ob_start();
+    ?>
+        <h1 class="home_titre">Article a la UNE</h1>
+    <section class="breaking">
+        <!-- Article principal -->
+        <article class="main-article">
+            <div class="article-image">
+                <img src="<?= MEDIA_ARTICLE_PATH . $article_a['image_name'] ?>" alt="<?= $article_a['title'] ?>">
+            </div>
+            <a href="?page=article&art_id=<?= $article_a['id'] ?>">
+                <h1><?= $article_a['title'] ?></h1>
+            </a>
+            <h2><?= $article_a['hook'] ?></h2>
         </article>
     </section>
+
+    <!-- Articles du bas -->
+    <section class="bottom-articles">
+        <?php foreach ($bottom_article_a as $article): ?>
+            <article class="bottom-article">
+                <a href="?page=article&art_id=<?= $article['id'] ?>">
+                    <h1><?= $article['title'] ?></h1>
+                </a>
+                <h2><?= $article['hook'] ?></h2>
+            </article>
+        <?php endforeach; ?>
+    </section>
     <?php
-    echo html_all_articles_main($bottom_article_a);
-
-	return ob_get_clean();
-
+    return ob_get_clean();
 }
 

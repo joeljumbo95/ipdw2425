@@ -5,5 +5,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="AWebWiz_wip" />
+    <orderEntry type="module" module-name="Site MVC" />
   </component>
 </module>
