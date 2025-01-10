@@ -54,96 +54,59 @@ header {
 
 }
 
-/*STYLES TABLE DROITE*/
-table{
-  width: 100%;
+/* STYLES ARTICLE HOMEPAGE ET PAGE ARTICLE*/
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-td{
-  height: 30px ;
-  vertical-align: top; 
-  background-color: white;
-  border: 2px solid black;
-}
-#meteo{
-  width: 50%;
-  border-right: 1px solid gray;
-  text-align: center;
-  font-weight: bold;
-  color: #003978;
-}
-#bourse{
-  text-align: center;
-  color: #003978;
-}
-#resbourse{
-  text-align: center;
-}
-#resmeteo{
-  border-bottom: 2px solid #003978;
-  text-align: center;
-}
-#celmeteo{
-  border-right: 1px solid gray;
+main section.article
+{
+    font-size: 14px;
 }
 
-#boutSports{
-  text-align: left;
-  vertical-align: bottom;
+main section.breaking article {
+  background-color: #cce5ff;
 }
 
-#fil{
-  font-weight: bold;
-  font-size: larger;
-  
+main section.breaking article h1,
+main section.bottom_articles article h1,
+main section.article article h1
+{
+    font-size: 20px;
 }
 
-#arttable{
-  text-align: left;
-  text-decoration: none;
-  border-bottom: 1px solid rgb(218, 218, 218);
-  border-left: 1px solid rgb(218, 218, 218);
+main section.breaking article h2,
+main section.bottom_articles article h1,
+main section.article article h2
+{
+    font-size: 16px;
+}
+
+main section.bottom_articles {
+  background-color: aliceblue;
+}
+
+/*IMAGE*/
+
+div.media_article img
+{
+    width: 1100px;
+}
+
+div.bouton_jaime
+{
+    background-color: #0056A3;
+    color: white;
+    padding: 10px 20px;
+    display:compact;
 
 }
 
-#arttable a{
-  text-decoration: none;
-  color: black;
-}
-
-#arttable a:hover {
-  text-decoration: underline;
-  color:#003978;
-}
-
-#celheure{
-  text-align: center;
-  border-bottom: 1px solid rgb(218, 218, 218);
 
 
-}
-.boutonActualites{
-  background-color: #003978;
-  color: white;
-  border-radius: 17px;
-  padding-top: 4px;
-  padding-left: 5px;
-  
-}
-.boutonSports{
-  background-color: whitesmoke;
-  color: black;
-  border-radius: 17px;
-  padding-top: 4px;
-  padding-left: 5px;
-  
-}
-
-li{
-  list-style: circle;
-  list-style-position: inside;
-  
-}
 
 
 

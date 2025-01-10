@@ -27,7 +27,12 @@ function include_mvc_php_files()
 // ROUTER
 session_start();
 
+if (!isset($_COOKIE['favorite'])) {
+    setcookie("favorite", 0, time() + 3600, '/');
+}
+
 include_mvc_php_files();
+
 
 // select page to load, ie. function to call
 // $page = @$_GET['page'] ?: 'home';

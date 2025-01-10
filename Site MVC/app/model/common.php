@@ -16,3 +16,19 @@ function get_menu_csv()
     }
     return $menu_aa;
 }
+
+/*
+ * Fonction returne un objet pdo et le crée si il n'existe pas
+ */
+
+function get_pdo()
+{
+    static $pdo; // Variable garde sa valeur meme apres la fonction
+
+    if(empty($pdo))
+    {
+        $pdo = new PDO (DATABASE_DSN,DATABASE_USERNAME,DATABASE_PASSWORD);
+        $pdo->query("SET NAMES UTF8");
+    }
+    return $pdo;
+}

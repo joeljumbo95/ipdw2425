@@ -28,6 +28,7 @@ function html_head($menu_a, $user_id="",$user_role="")
         </div>
 
     </header>
+    <main>
       <div class="container">
         <nav class="navbar">
             <?php
@@ -61,8 +62,9 @@ function html_foot()
 {
 	ob_start();
 	?>
-        <hr />
+    </main>
     <footer>
+        <hr />
         <div class="container">
             <div class="row">
                 <div class="col-sm-4">

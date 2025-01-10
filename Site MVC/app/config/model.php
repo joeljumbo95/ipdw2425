@@ -1,24 +1,37 @@
 <?php
 
-const MACHINE = "home"; // "classe38" ou  "home" ou ... ce qu'on veut
+const MACHINE = "classe38";
 
-const DATABASE_TYPE = "MySql";  // "csv"
-const DATABASE_NAME = "4ipdw_2023";
+/**
+ * DATABASE_TYPE : "SQL" pour la BD ou "JSON" pour le fichier statique dans asset
+ */
+const DATABASE_TYPE = "SQL";
 
-switch(MACHINE) {
-	// ISFCE, classe 38
-	case "classe38":
-		define( "DATABASE_PORT", 3307 ); 	// MAriaDB
-		define( "DATABASE_USERNAME", "root" );
-		define( "DATABASE_PASSWORD", "" );
-		break;
-	case "home":
-		define( "DATABASE_PORT", 3306 );  	// MysSQL
-		define( "DATABASE_USERNAME", "root" );
-		define( "DATABASE_PASSWORD", "root" );
-		break;
+
+switch (DATABASE_TYPE) {
+    case "SQL":
+        define(  "DATABASE_NAME", "press_2024_v03");
+        break;
+    case "JSON":
+        define(  "DATABASE_NAME", "../asset/database/article.json");
+        break;
 }
 
-const DSN =  "mysql:host=localhost;dbname=4ipdw_2023;port=".DATABASE_PORT.";";
+/*
+ * Switch pour avoir le meme code sur nimporte quelle ordinateur
+ */
+switch(MACHINE) {
+    // ISFCE, classe 38
+    case "classe38":
+        define( "DATABASE_PORT", 3307 ); 	// MAriaDB
+        define( "DATABASE_USERNAME", "root" );
+        define( "DATABASE_PASSWORD", "" );
+        break;
+    case "home":
+        define( "DATABASE_PORT", 3306 );  	// MySQL
+        define( "DATABASE_USERNAME", "root" );
+        define( "DATABASE_PASSWORD", "" );
+        break;
+}
 
-// var_dump(DSN);
+const DATABASE_DSN =  "mysql:host=localhost;dbname=".DATABASE_NAME.";port=".DATABASE_PORT.";";
